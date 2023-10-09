@@ -13,7 +13,7 @@ Este é um projeto de exemplo de um sistema CRUD (Create, Read, Update, Delete) 
 
 ## Pré-requisitos
 
-- Java JDK 8 ou superior instalado.
+- Java JDK 17 ou superior instalado.
 - Gradle para compilação e gerenciamento de dependências.
 
 
