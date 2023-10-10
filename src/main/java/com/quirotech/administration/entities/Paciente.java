@@ -1,4 +1,4 @@
-package com.quirotech.administration.model;
+package com.quirotech.administration.entities;
 
 
 import jakarta.persistence.Entity;
@@ -19,12 +19,12 @@ import java.time.LocalDate;
 public class Paciente implements Serializable {
 
     @Id
-    private String cpf;
+    public String cpf;
 
-    private String nome;
-    private LocalDate dataNascimento;
-    private String sexo;
-    private String senha;
-    private String pais;
+    public String nome;
+    public LocalDate dataNascimento;
+    public String sexo;
+    public String senha;
+    public String pais;
     //private List<Contato> contatos;
 }
