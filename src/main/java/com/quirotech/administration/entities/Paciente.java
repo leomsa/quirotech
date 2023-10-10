@@ -3,6 +3,7 @@ package com.quirotech.administration.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.*;
 
 import java.io.Serializable;
@@ -14,17 +15,17 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 
-
-@Entity
+@Table(name="paciente")
+@Entity(name="paciente")
 public class Paciente implements Serializable {
 
     @Id
     public String cpf;
 
-    public String nome;
-    public LocalDate dataNascimento;
-    public String sexo;
-    public String senha;
-    public String pais;
+   private String nome;
+   private LocalDate dataNascimento;
+   private String sexo;
+   private String senha;
+   private String pais;
     //private List<Contato> contatos;
 }
