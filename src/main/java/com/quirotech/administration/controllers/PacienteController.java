@@ -12,14 +12,15 @@ public class PacienteController {
 
     @Autowired
     private PacienteRepository repository;
-//    @GetMapping
-//    public ResponseEntity getAllPacientes(){
-//        var allProducts = repository.findAll();
-//        return ResponseEntity.ok(allProducts);
-//    }
+
     @PostMapping("/")
     public Paciente create(@RequestBody Paciente paciente) {
-        var  userCreated = this.repository.save(paciente);
-        return userCreated;
+        var  patientCreated = this.repository.save(paciente);
+        return patientCreated;
+    }
+    @GetMapping("/allpatients")
+    public ResponseEntity getAllPacientes(){
+        var allpatients = this.repository.findAll();
+        return ResponseEntity.ok(allpatients);
     }
 }
