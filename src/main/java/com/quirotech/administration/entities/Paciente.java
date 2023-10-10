@@ -8,9 +8,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -29,5 +31,8 @@ public class Paciente implements Serializable {
     private String sexo;
     private String senha;
     private String pais;
+
+    @CreationTimestamp
+    private LocalDateTime createdAt;
     //private List<Contato> contatos;
 }

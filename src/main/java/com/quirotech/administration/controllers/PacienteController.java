@@ -12,18 +12,14 @@ public class PacienteController {
 
     @Autowired
     private PacienteRepository repository;
-    @GetMapping
-    public ResponseEntity getAllPacientes(){
-        var allProducts = repository.findAll();
-        return ResponseEntity.ok(allProducts);
-    }
+//    @GetMapping
+//    public ResponseEntity getAllPacientes(){
+//        var allProducts = repository.findAll();
+//        return ResponseEntity.ok(allProducts);
+//    }
     @PostMapping("/")
-    public void create(@RequestBody Paciente paciente) {
-        System.out.println(paciente.getCpf());
-        System.out.println(paciente.getNome());
-        System.out.println(paciente.getDataNascimento());
-        System.out.println(paciente.getSexo());
-        System.out.println(paciente.getSenha());
-        System.out.println(paciente.getPais());
+    public Paciente create(@RequestBody Paciente paciente) {
+        var  userCreated = this.repository.save(paciente);
+        return userCreated;
     }
 }
