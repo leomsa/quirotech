@@ -18,13 +18,12 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Table(name = "paciente")
 @Entity(name = "paciente")
 public class Paciente implements Serializable {
 
     @Id
-    public String cpf;
+    private String cpf;
 
     private String nome;
     private LocalDate dataNascimento;
