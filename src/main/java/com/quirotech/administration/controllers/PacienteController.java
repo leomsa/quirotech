@@ -18,6 +18,7 @@ public class PacienteController {
 
     @PostMapping("/criar")
     public ResponseEntity create(@RequestBody Paciente paciente) {
+
         var registrarCPF = this.repository.findPacienteByCpf(paciente.getCpf());
 
         if (registrarCPF != null) {

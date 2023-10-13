@@ -28,7 +28,7 @@ public class Paciente implements Serializable {
     private String nome;
     private LocalDate dataNascimento;
     private String sexo;
-    private String senha;//
+    private String senha;
     private String pais;
 
     @CreationTimestamp
